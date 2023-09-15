@@ -5,7 +5,11 @@ local RENDER_DISTANCE = 50
 local X_SCALE = 90
 local Z_SCALE = 90
 local GENERATION_SEED = math.random() 	
-local TERRAIN_TYPE = Enum.Material.Grass 
+local Grass = Enum.Material.Grass 
+local Mountain = Enum.Material.Rock
+local Ground = Enum.Material.Ground
+local Water = Enum.Material.Water
+local Sand = Enum.Material.Sand
 local Players = game:GetService("Players")
 local chunks = {}
 
@@ -37,7 +41,7 @@ function makeChunk(chunkX, chunkZ)
 			local cz = (chunkZ * CHUNK_SCALE) + z
 			local noise = math.noise(GENERATION_SEED, cx / X_SCALE, cz / Z_SCALE)
 			local cy = noise * BASE_HEIGHT
-			mountLayer(cx, cy, cz, TERRAIN_TYPE) 
+			mountLayer(cx, cy, cz, Grass) 
 		end
 	end
 end
