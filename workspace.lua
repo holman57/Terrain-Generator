@@ -1,4 +1,7 @@
 
+-- https://www.redblobgames.com/maps/terrain-from-noise/
+-- https://heredragonsabound.blogspot.com/2019/02/perlin-noise-procedural-content.html
+
 local BASE_HEIGHT = 10
 local CHUNK_SCALE = 3
 local RENDER_DISTANCE = 50
